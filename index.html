@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css" integrity="sha512-LX0YV/MWBEn2dwXCYgQHrpa9HJkwB+S+bnBpifSOTO1No27TqNMKYoAn6ff2FBh03THAzAiiCwQ+aPX+/Qt/Ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>DOM Checkpoint</title>
+</head>
+<body>
+    <header>
+        <h1>Checkout Page</h1>
+    </header>
+    <main>
+        <div class="cart-item">
+            <span class="mdi mdi-close-circle-outline myIcon delete-item"></span>
+
+            <span class="mdi mdi-heart-multiple myIcon like-item"></span>
+
+            <img class="productImg" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5b0981ff-45f8-40c3-9372-32430a62aaea/dunk-high-womens-shoes-L3Tqlr.png" alt="">
+
+            <div class="productName">
+                <h4 class="prodName">Common Project Bball High</h4>
+                <p class="productColor">White</p>
+            </div>
+
+            <div class="productQuantity">
+                <button class="minus prodQuantBtn"><span class="mdi mdi-minus"></span></button>
+                <div class="quantity" min-length="1">1</div>
+                <button class="add prodQuantBtn"><span class="mdi mdi-plus"></span></button>
+            </div>
+
+            <!-- <div class="amount"> -->
+            <p class="item-price">2000</p>
+            <div class="original-price">2000</div>
+            <!-- </div> -->
+        </div>
+        <div class="cart-item">
+            <span class="mdi mdi-close-circle-outline myIcon delete-item"></span>
+
+            <span class="mdi mdi-heart-multiple myIcon like-item"></span>
+
+            <img class="productImg" src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/572a3c3d-8244-4e32-add1-99a080db2a60/air-griffey-max-1-mens-shoes-6q83v3.png" alt="">
+
+            <div class="productName">
+                <h4 class="prodName">Common Project Bball High</h4>
+                <p class="productColor">White</p>
+            </div>
+
+            <div class="productQuantity">
+                <button class="minus prodQuantBtn"><span class="mdi mdi-minus"></span></button>
+                <div class="quantity" min-length="1">1</div>
+                <button class="add prodQuantBtn"><span class="mdi mdi-plus"></span></button>
+            </div>
+
+            <!-- <div class="amount"> -->
+            <p class="item-price">6000</p>
+            <div class="original-price">6000</div>
+            <!-- </div> -->
+        </div>
+        <div class="cart-item">
+            <span class="mdi mdi-close-circle-outline myIcon delete-item"></span>
+
+            <span class="mdi mdi-heart-multiple myIcon like-item"></span>
+
+            <img class="productImg" src="data:image/jpeg;base64,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cbG38WNb4f8AA/8A9zDqbSruxJXDXvrZHGuh+ftnaH6GYE//AJkHcAPyni3QfBcKSju0kTjxnqLedcZXEVuAojW2iPw/3z0XF1v/AA8vgfhv+3OvHoJhOCAeJln7CYX5APP6yfGI8q5KMVVI/wAjiP8ADfeDY/blFrVDuFDj/lvwNvnnWx0Dw3y/n9ZcvQTCj7P5j9Y8YeVcyw23sTSGiUXUalAroTzsczAnvkjsvEU6ztXo1KdMMl2Sq60x7S5va/Kx3Dj5dAXoRhflPm31lq9AsCCT7FCTqSVBJPaTKzjxmXlE3O2arTdoYnJ1Q1NwSAzJWw9snGwLhjy3cZC1+k9FXU3qALmJOS1mFsthfXjr9Z1D9hsD/AT8K/SWt0D2ed+GQ+A+kve+lZ059i+l618r06IJygNUdmRS3JVUEnxtMYbfrX0WgPCqdR4zpidB8CostCwG4B3AHgDaXjoXgf4J/HUt5ZrTKcOEnpe8uTm69K8TfMRTbt/eKSB2kn8jMj9uHtc4a+m8us38dCsD/BP46lvAZtIHQnAfwPN6p/5ReHC/CZy5RzLG9Jy+vuqL2+0t+SyOqbSrNyQclCMR253BufATr37E4Dd7uDw1eqdPxQeg+zuOFpnvLn82k48WM+EXkyrjgxDHQuzH7zZrdyqFXzBkzsbYJqkFqtKmt9S7gse0KNfMidOTodgF3YSj+G/6zKp9HMIvw4aiP9izSST0pbb7RvR/o9hKFnVlqP8AOSpsfurw9TNmmLSwNJPhpovcqierYlBvdfMQPWJjjFod1z3A/nPdTeBWIiAiIgIiICIiBg11fit+0a+m+YjuOIt3i0mYMCDyoeAlQORYdzESXagh3ovkJ5nBJ8vkSP1gR4dvnf8AEZeKr/OfQ/pMs4BPvDxP6yn93r8zen0geArv8/ov0lwxL8x5T09w++fISnuJ+f8Al/rAoMU/3fI/WXjFNyHrLfcm+ceX9ZX3RvmHkYFwxLch6yoxJ5CWe6v8w9ZX3Z+a+sC73k8h5x7yeQ85b7s/NfWPdn5r6wLjiTyEtOKbkPWU91f5l9ZT3RvmHkYA4p/u+R+ssOKfmvl/WX+5N848j9ZT3E/P/L/WB5nEv83oJY1Z/nPkv0mR/d/3z5CP7vHzt6fSBhl34u/naWHtZj/uP1kiNnJzY+P9JUYBPlJ8W+sCLyL/AN1lVqKN1pLrhEH2F8r/AJz1VANwA7gBAi6WY7kbysPWSVEEDrWv2S+ICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICUiIFYiICUiIFYiICIiAiIgIiICIiAiIgIiIFIiIFYiICIiAiIgf/Z" alt="">
+
+            <div class="productName">
+                <h4 class="prodName">Common Project Bball High</h4>
+                <p class="productColor">White</p>
+            </div>
+
+            <div class="productQuantity">
+                <button class="minus prodQuantBtn"><span class="mdi mdi-minus"></span></button>
+                <div class="quantity" min-length="1">1</div>
+                <button class="add prodQuantBtn"><span class="mdi mdi-plus"></span></button>
+            </div>
+
+            <!-- <div class="amount"> -->
+            <p class="item-price">25000</p>
+            <div class="original-price">25000</div>
+            <!-- </div> -->
+        </div>
+        <div class="cart-item">
+            <span class="mdi mdi-close-circle-outline myIcon delete-item"></span>
+
+            <span class="mdi mdi-heart-multiple myIcon like-item"></span>
+
+            <img class="productImg" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5b0981ff-45f8-40c3-9372-32430a62aaea/dunk-high-womens-shoes-L3Tqlr.png" alt="">
+
+            <div class="productName">
+                <h4 class="prodName">Common Project Bball High</h4>
+                <p class="productColor">White</p>
+            </div>
+
+            <div class="productQuantity">
+                <button class="minus prodQuantBtn"><span class="mdi mdi-minus"></span></button>
+                <div class="quantity" min-length="1">1</div>
+                <button class="add prodQuantBtn"><span class="mdi mdi-plus"></span></button>
+            </div>
+
+            <!-- <div class="amount"> -->
+            <p class="item-price">10000</p>
+            <div class="original-price">10000</div>
+            <!-- </div> -->
+        </div>
+
+        <div class="total">
+            <p>Total</p> <span>=</span>
+            <p id="total">0</p>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
